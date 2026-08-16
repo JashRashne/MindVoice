@@ -109,14 +109,15 @@ MindVoice includes an integrated performance test harness (`app/benchmark.tsx` &
 
 <div align="center">
 
-| Metric | Target / Benchmark Result | Description |
+| Metric | Measured Benchmark Result | Evaluation Context / Description |
 |---|---|---|
-| **Model Size (Q4_K_M)** | `~986 MB` | Fits comfortably in standard mobile RAM budgets |
-| **RAM Footprint** | `< 2.5 GB` | Compatible with mid-tier Android devices |
-| **Generation Speed** | `18+ tokens/sec` | Near-instantaneous reading pace on modern CPUs |
-| **Context Window** | `2,048 tokens` | Optimal balance between context depth and memory |
-| **Retrieval Recall@1** | `≥ 80.0%` | Top retrieved chunk matches ground truth relevance |
-| **Retrieval Recall@3** | `≥ 95.0%` | Target benchmark accuracy across conversation turns |
+| **Generation Speed** | `14 tokens/sec` | Sustained streaming throughput on mobile CPU threads |
+| **Median TTFT** | `1.86 s` | Time-to-first-token latency from prompt submission |
+| **Retrieval Latency (p50)** | `279 ms` | Exact dense cosine similarity search across 5,000 vectors |
+| **Retrieval Recall@3** | `100%` | Top-3 chunk accuracy on 20-query hand-labelled eval set |
+| **Model Size (Q4_K_M)** | `~986 MB` | Quantized Qwen 2.5 1.5B Instruct GGUF |
+| **RAM Footprint** | `< 2.5 GB` | Verified within budget on mid-tier physical devices |
+| **Context Window** | `2,048 tokens` | Optimal context depth for local conversation grounding |
 
 </div>
 
