@@ -1,3 +1,3 @@
-const { getDefaultConfig } = require("eslint-config-expo/flat");
+const expoConfig = require("eslint-config-expo/flat");
 
-module.exports = getDefaultConfig(__dirname);
+module.exports = expoConfig;
